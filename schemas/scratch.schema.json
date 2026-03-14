@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Scratch Project Schema",
+  "type": "object",
+  "required": ["id","title","platform"],
+  "properties": {
+    "id": {"type":"string","description":"UUID"},
+    "title": {"type":"string"},
+    "platform": {"type":"string","const":"scratch"},
+    "author": {"type":"string"},
+    "description": {"type":"string"},
+    "tags": {"type":"array","items":{"type":"string"}},
+    "visual": {
+      "type":"object",
+      "properties": {
+        "thumbnail": {"type":"string"},
+        "stage": {
+          "type":"array",
+          "items": {
+            "type":"object",
+            "properties": {
+              "sprite": {"type":"string"},
+              "scripts": {
+                "type":"array",
+                "items": {
+                  "type":"object",
+                  "properties": {
+                    "when": {"type":"string"},
+                    "blocks": {"type":"array","items":{"type":"string"}}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type":"object",
+      "properties": {
+        "created_at": {"type":"string","format":"date-time"},
+        "source_image": {"type":"string"}
+      }
+    }
+  }
+}
