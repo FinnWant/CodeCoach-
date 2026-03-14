@@ -1,0 +1,19 @@
+# Build
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Data and media
+data/
+media/
+*.db
+
+# OS
+Thumbs.db
+*.DS_Store
