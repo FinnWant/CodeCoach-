@@ -20,24 +20,24 @@ CodeCoach+ helps code coaches collect, analyze, and present student project exam
 
 ## Step-by-step Implementation
 
-1) Requirements & scope (1–2 days)
+1) [x] Requirements & scope (1–2 days)
 - Confirm target platforms (Scratch, PixelPad, Unity) and expected artifacts (images, code text, project files).
 - Decide whether image analysis runs locally or via cloud APIs.
 - Choose storage: local SQLite DB + media folder, or cloud storage.
 - Deliverable: requirements spec and acceptance criteria.
 
-2) Design JSON schemas (1–2 days)
+2) [x] Design JSON schemas (1–2 days)
 - Create clear JSON formats for each platform (examples below).
 - Define fields: id, title, author, platform, language, description, tags, extracted_code (structured), visual_representation (image references), metadata (creation date, source image).
 - Deliverable: `schemas/` directory with `.json` schema files.
 
-3) Project scaffold (1 day)
+3) [x] Project scaffold (1 day)
 - Initialize repo with CMake, main app, and tests directory.
 - Create `backend/` (C++ core), `ui/` (Qt project), `schemas/`, and `docs/`.
 - Add dependency management (vcpkg or include docs for building dependencies).
 - Deliverable: minimal app that opens and prints "CodeCoach+ ready".
 
-4) Core backend: data model + DB (2–3 days)
+4) [x] Core backend: data model + DB (2–3 days)
 - Implement models mirroring JSON schemas using `nlohmann::json` for serialization.
 - Implement SQLite storage layer with migrations.
 - Implement media storage (e.g., `media/` folder) and unique filename scheme.

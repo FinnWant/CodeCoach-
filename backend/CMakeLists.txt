@@ -1,5 +1,8 @@
 add_library(backend_lib
     Database.cpp
+    Repository.cpp
+    EntryFactory.cpp
+    Validation.cpp
 )
 
 target_include_directories(backend_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
@@ -16,5 +19,5 @@ if(nlohmann_json_FOUND)
 endif()
 
 set_target_properties(backend_lib PROPERTIES
-  PUBLIC_HEADER "Database.h;Model.h"
+  PUBLIC_HEADER "Database.h;Model.h;Repository.h;EntryFactory.h;Validation.h"
 )
