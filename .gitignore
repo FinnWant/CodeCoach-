@@ -5,6 +5,10 @@ CMakeCache.txt
 cmake_install.cmake
 Makefile
 
+# Claude Code
+.claude/
+compile_commands.json
+
 # Editor/IDE
 .vscode/
 .idea/
